@@ -21,7 +21,7 @@ public class AppTest
     @Test
     public void test3()
     {
-        double result = App.estimatePI(100000000, 5);
+        double result = App.estimatePI(100000000, 0.1);
         assertEquals(3.141, result, 0.001);
     }
     @Test

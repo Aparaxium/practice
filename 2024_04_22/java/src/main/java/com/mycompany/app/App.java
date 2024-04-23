@@ -9,22 +9,14 @@ public class App {
 
         for (int i = 0; i < k; i++) {
 
-            double x = random.nextDouble() * radius * 2 - radius * 1;
-            double y = random.nextDouble() * radius * 2 - radius * 1;
+            double x = random.nextDouble() * radius;
+            double y = random.nextDouble() * radius;
 
-            if (monteCarlo(x, y, radius)) {
+            if (x * x + y * y <= radius * radius) {
                 success++;
             }
             total++;
         }
         return 4 * success / total;
-    }
-
-    public static boolean monteCarlo(double x, double y, double radius) {
-
-        double distance = Math.sqrt(x * x + y * y);
-
-        return distance <= radius;
-
     }
 }
